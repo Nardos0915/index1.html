@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function sumNumbers() {
+            var result1 = document.getElementById("result1");
+            var result2 = document.getElementById("result2");
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            result1.innerHTML = Number(num1) / Number(num2);
+            result2.innerHTML = Number(num1) * Number(num2);
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2>Area of a triangle</h2>
+        <p>The area of the triangle is: <span id="result">Calculating...</span></p>
+
+        <script>
+            // Assign values to the triangle sides
+            var a = 5;
+            var b = 6;
+            var c = 7;
+
+            // Function to calculate the area using Heron's formula
+            function findAreaOfTriangle(a, b, c) {
+                var s = (a + b + c) / 2; // Semi-perimeter
+                var area = Math.sqrt(s * (s - a) * (s - b) * (s - c)); // Area calculation
+                return area;
+            }
+
+            // Calculate the area
+            var area = findAreaOfTriangle(a, b, c);
+
+            // Display the result on the webpage
+            document.getElementById("result").innerText = area; // Show result with 2 decimal places
+        </script>
+
+    </div>
+
+    <form>
+        <h2>Multiplication and Division of two numbers </h2>
+        <input type="text" id="num1">
+        <input type="text" id="num2">
+        <button type="button" onclick="sumNumbers()">click me!</button>
+        <p id="result1"></p>
+        <p id="result2"></p>
+        <p>Result1: <span id="result1"></span></p>
+        <p>Result2: <span id="result2"></span></p>
+
+
+
+
+        <div>
+
+
+            <h2>Add javascript to your string</h2>
+            <input type="text" id="inputString" placeholder="Enter your string here">
+            <button onclick="addJavaScript()">Add JavaScript</button>
+
+            <!-- Display the result -->
+            <p>Result: <span id="result"></span></p>
+            <script>
+                function addJavaScript() {
+                    // Get the input string
+                    var originalString = document.getElementById("inputString").value;
+                    // Create a new string
+                    var newString = "JavaScript " + originalString;
+                    // Display the result
+                    document.getElementById("result").innerText = newString;
+                }
+            </script>
+
+
+        </div>
+
+</body>
+
+</html>
