@@ -66,23 +66,24 @@
 
             <h2>Add javascript to your string</h2>
             <input type="text" id="inputString" placeholder="Enter your string here">
-            <button onclick="addJavaScript()">Add JavaScript</button>
+            <button onclick="addJavaScript()" type="button">Add JavaScript</button>
 
             <!-- Display the result -->
-            <p>Result: <span id="result"></span></p>
+            <p>Result: <span id="result5"></span></p>
+
+
+        </div>
             <script>
                 function addJavaScript() {
                     // Get the input string
                     var originalString = document.getElementById("inputString").value;
+                    console.log(originalString)
                     // Create a new string
                     var newString = "JavaScript " + originalString;
                     // Display the result
-                    document.getElementById("result").innerText = newString;
+                    document.getElementById("result5").innerText = newString
                 }
             </script>
-
-
-        </div>
 
 </body>
 
